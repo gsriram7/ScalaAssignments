@@ -1,7 +1,7 @@
 def last(elements: List[Int]):Int= {
   elements match {
     case head :: Nil => head
-    case head :: tail => last(tail)
+    case head :: body => last(body)
   }
 }
 
