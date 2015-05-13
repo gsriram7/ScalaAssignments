@@ -1,8 +1,8 @@
 def reverseUtility(element: List[Int], result: List[Int]): List[Int] = {
   element match {
     case Nil => Nil
-    case x :: Nil => x :: result
-    case x :: y => reverseUtility(y, (x :: result))
+    case head :: Nil => head :: result
+    case head :: tail => reverseUtility(tail, (head :: result))
   }
 }
 
@@ -12,3 +12,4 @@ def reverse(element: List[Int]): List[Int] = {
 
 reverse(List(1,2,3,4,5,6,7))
 reverse(List())
+

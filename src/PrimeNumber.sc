@@ -8,8 +8,8 @@ def isPrime(num: Int, flag: Boolean, iter: Int): Boolean = {
 
 def listPrimesInRange(start: Int, end: Int): List[Int] = {
   start match {
-    case number if(number == end) => {
-      if(isPrime(number, true, 2))
+    case number if (number == end) => {
+      if (isPrime(number, true, 2))
         List(number)
       else
         Nil

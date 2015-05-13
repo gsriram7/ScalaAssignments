@@ -1,5 +1,5 @@
 def traverse(row: Int, col: Int, count: Int): Int = {
-  if(row>2 || col>2)
+  if (row > 2 || col > 2)
     0
   if (row == 2 && col == 2) {
     println("y")
