@@ -16,4 +16,10 @@ def sumOfMultiplesOf3or5(current: Int, limit: Int): Int = {
 }
 
 sumOfMultiplesOf3or5(1, 10)
+sumOfMultiplesOf3or5(1, 100)
+
+
+
+
+
 

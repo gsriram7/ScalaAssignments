@@ -10,6 +10,6 @@ def reverse(element: List[Int]): List[Int] = {
   reverseUtility(element, List())
 }
 
-reverse(List(1,2,3,4,5,6,7))
+reverse(List(1, 2, 3, 4, 5, 6, 7))
 reverse(List())
 

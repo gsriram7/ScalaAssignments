@@ -1,5 +1,5 @@
-def isPrime(num: Int, flag: Boolean, iter: Int): Boolean = {
-  num match {
+def isPrime(number: Int, flag: Boolean, iter: Int): Boolean = {
+  number match {
     case num if (iter == (num / 2)) => flag
     case num if (num % iter == 0) => false
     case num => isPrime(num, flag, iter + 1)
@@ -24,3 +24,4 @@ def listPrimesInRange(start: Int, end: Int): List[Int] = {
 }
 
 listPrimesInRange(7, 31)
+listPrimesInRange(5, 100)
