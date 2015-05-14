@@ -1,12 +1,15 @@
-def latticePath(row:Int, col:Int):Long ={
-  (row, col) match {
-    case point if row==0 || col==0 => 1
-    case point => latticePath(row-1, col) + latticePath(row, col-1)
+def factorial(accumulator:BigInt, number:Int) : BigInt = {
+  number match {
+    case 1 => accumulator
+    case x => factorial(accumulator*number, number-1)
   }
 }
 
-latticePath(2,2)
+def latticePath(down:Int, right:Int):BigInt ={
+  factorial(1, down+right)/(factorial(1, down).pow(2))
+}
 
+latticePath(20,20)
 
 
 
