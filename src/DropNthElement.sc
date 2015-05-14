@@ -1,16 +1,9 @@
 def drop(index: Int, current: Int, element: List[Int]): List[Int] = {
   element match {
-    case Nil => Nil
-    case head :: Nil => if (current % index != 0)
-      List(head)
-    else
-      Nil
-    case head :: tail => {
-      if (current % index != 0)
-        head :: drop(index, current + 1, tail)
-      else
-        drop(index, current + 1, tail)
-    }
+    case head :: Nil if current % index != 0 => List(head)
+    case head :: tail if current % index != 0 => head :: drop(index, current + 1, tail)
+    case head :: tail => drop(index, current + 1, tail)
+    case _ => Nil
   }
 }
 

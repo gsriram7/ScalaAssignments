@@ -1,10 +1,10 @@
 def slice(start: Int, end: Int, ele: List[Int], curr: Int): List[Int] = {
   ele match {
     case Nil => Nil
-    case x :: Nil if curr < start => List(x)
-    case x :: y if curr == (end - 1) => List(x)
-    case x :: y if curr < start => slice(start, end, y, curr + 1)
-    case x :: y if curr >= start && curr < end => x :: slice(start, end, y, curr + 1)
+    case head :: Nil if curr < start => List(head)
+    case head :: tail if curr == (end - 1) => List(head)
+    case head :: tail if curr < start => slice(start, end, tail, curr + 1)
+    case head :: tail if curr >= start && curr < end => head :: slice(start, end, tail, curr + 1)
   }
 }
 

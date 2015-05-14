@@ -1,17 +1,16 @@
-def latticePath(row:Int, col:Int, count:Int):Int ={
-  (row,col) match {
-    case point if row==2 && col==2 => count + 1
-    case point if row==1 && col==1 => count + 2
-    case point => {
-      if(col+1 < 3)
-        latticePath(row, col+1, count)
-      if (row+1 < 3)
-        latticePath(row+1, col, count)
-      else
-        count
-    }
+val maxRows = 2
+val maxCols = 2
+
+def latticePathAttempt2(row: Int, col: Int, count: Int): Int = {
+  if (row == maxRows && col == maxCols){
+    count + 1
+  }else if (row >= maxRows){
+    latticePathAttempt2(row, col+1, count)
+  }else if(col >= maxCols){
+    latticePathAttempt2(row+1, col, count)
+  }else{
+    latticePathAttempt2(row + 1, col, latticePathAttempt2(row, col + 1, count))
   }
+
 }
-
-latticePath(1, 1, 0)
-
+latticePathAttempt2(0, 0, 0)
