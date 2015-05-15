@@ -1,22 +1,21 @@
-def sumOfMultiplesOf3or5(current: Int, limit: Int): Int = {
-  current match {
-    case current if (current == limit) =>
+def sumOfMultiplesOf3or5(accumulator:Int, current: Int, limit: Int): Int = {
+  if (current == limit)
       if (current % 3 == 0 && current % 5 == 0)
-        current
+        current + accumulator
       else
-        0
+        accumulator
 
-    case current if (current < limit) =>
+  else
       if ((current % 3 == 0) || (current % 5 == 0))
-        current + sumOfMultiplesOf3or5(current + 1, limit)
+        sumOfMultiplesOf3or5(current+accumulator, current + 1, limit)
       else
-        sumOfMultiplesOf3or5(current + 1, limit)
+        sumOfMultiplesOf3or5(accumulator, current + 1, limit)
 
-  }
+
 }
 
-sumOfMultiplesOf3or5(1, 10)
-sumOfMultiplesOf3or5(1, 100)
+sumOfMultiplesOf3or5(0, 1, 10)
+sumOfMultiplesOf3or5(0, 1, 10000000)
 
 
 
