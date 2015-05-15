@@ -1,2 +1,2 @@
-val ele = (3 to 10).toList
-println(ele)
+val ele: Array[Array[Int]]
+ele(0)(0) = 1
