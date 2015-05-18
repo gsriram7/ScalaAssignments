@@ -15,7 +15,7 @@ def sumOfMultiplesOf3or5(accumulator:Int, current: Int, limit: Int): Int = {
 }
 
 sumOfMultiplesOf3or5(0, 1, 10)
-sumOfMultiplesOf3or5(0, 1, 10000000)
+sumOfMultiplesOf3or5(0, 1, 1000000)
 
 
 

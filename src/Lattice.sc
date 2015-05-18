@@ -1,8 +1,8 @@
 def factorial(accumulator:BigInt, number:Int) : BigInt = {
-  number match {
-    case 1 => accumulator
-    case x => factorial(accumulator*number, number-1)
-  }
+  if(number == 1)
+    accumulator
+  else
+    factorial(accumulator*number, number-1)
 }
 
 def latticePath(down:Int, right:Int):BigInt ={
@@ -10,7 +10,6 @@ def latticePath(down:Int, right:Int):BigInt ={
 }
 
 latticePath(20, 20)
-
 
 
 
