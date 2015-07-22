@@ -1,3 +1,4 @@
+//hello
 def drop(index: Int, current: Int, element: List[Int]): List[Int] = {
   element match {
     case head :: Nil if current % index != 0 => List(head)
